@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Details</title>
+    </head>
+    <bod>
+        <form method="POST">
+            {{ contact.hidden_tag() }}
+            {{ contact.name.label }} {{ contact.name() }}
+            {{contact.submit()}}
+        </form>
+
+        <p>Your name is: {{ name }}</p>
+    </bod>
+</html>

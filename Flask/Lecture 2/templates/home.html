@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>Flask App</title>
+    </head>
+    <body>
+        <h1>THis is our Flask app</h1>
+        <p> Welcome to Flask Tutorial Sessions by Nerchuko</p>
+        {% for i in content %}
+        <p>{{ i }}</p>
+        {% if i == 'ML' %}
+        <p>Free Course For all!</p>
+        {% endif %}
+        {% endfor %}
+    </body>
+</html>

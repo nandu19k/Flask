@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Contact Details</title></head>
+    <body>
+        <h2>Contact Form</h2>
+
+        {% for msg in form.name.errors %}
+        <div>{{msg}}</div>
+        {% endfor %}
+
+        {% for msg in form.email.errors %}
+        <div>{{msg}}</div>
+        {% endfor %}
+
+        <form action="/contact" method="POST">
+        {{ form.hidden_tag() }}
+
+        {{form.name.label}} {{form.name}} <br>
+
+        {{ form.Gender.label }} {{ form.Gender }} <br>
+
+        {{ form.Address.label }} {{form.Address }} <br>
+
+        {{ form.email.label }}  {{form.email}} <br>
+
+        {{form.Age.label }}  {{ form.Age }} <br>
+
+        {{ form.Language.label }}  {{ form.Language }} <br>
+
+        {{ form.submit }}
+        </form>
+
+    </body>
+
+</html>

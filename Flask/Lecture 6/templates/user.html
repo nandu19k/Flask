@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Page</title>
+    </head>
+    <body>
+        <h1>Welcome to User page, {{user}}</h1>
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+               {% for msg in messages %}
+                 <p>{{msg}}</p> 
+                {% endfor %}  
+             {% endif %}
+
+        {% endwith %}
+        <br>
+      
+    </body>
+</html>
